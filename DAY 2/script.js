@@ -1,11 +1,11 @@
 //you are given a number n.You need to find all the odd numbers which are less than and equal to n
 
-let n = 10;
-for(let i =0;i<=n;i++){
-  if(i%2 !==0 ){
-        console.log(i)
-  }
-}
+// let n = 10;
+// for(let i =0;i<=n;i++){
+//   if(i%2 !==0 ){
+//         console.log(i)
+//   }
+// }
 
 
 // you are given  a number N.let us say floor of 32 devided by N is X
@@ -15,18 +15,18 @@ for(let i =0;i<=n;i++){
 //In case it is not possible to generate a valid number,print -1
 //In all other cases print x
 
-let n1 = 0;
+// let n1 = 0;
 
-if(n1==0){
-  console.log(-1)
-}else{
-  let x = Math.floor(32/n1);
-  if(x==0){
-    console.log("too low");
-  }else{
-    console.log(x)
-  }
-}
+// if(n1==0){
+//   console.log(-1)
+// }else{
+//   let x = Math.floor(32/n1);
+//   if(x==0){
+//     console.log("too low");
+//   }else{
+//     console.log(x)
+//   }
+// }
 
 
 // Title: L0 - Array Manipulation: Tracking Daily Temperatures
@@ -36,8 +36,8 @@ if(n1==0){
 // After that, log the updated temperatures for all 7 days to the console.
 
 //first creating array
-let arr = [10,9,8,7,6,5,4];
-arr[3]=7+2;
+// let arr = [10,9,8,7,6,5,4];
+// arr[3]=7+2;
 // console.log(arr)
 
 
@@ -47,9 +47,9 @@ arr[3]=7+2;
 // Problem Statement: Create an array that represents your daily to-do list with 5 tasks.
 // Add a new task to the beginning of the list. Then, remove the last task from the list.
 // Finally, log the updated to-do list to the console.
-let tasks = ["Jogging","Coding","Gyming","Salah","Sleeping"];
-tasks.unshift("Drawing");
-tasks.pop()
+// let tasks = ["Jogging","Coding","Gyming","Salah","Sleeping"];
+// tasks.unshift("Drawing");
+// tasks.pop()
 // console.log(tasks);
 
 
@@ -63,10 +63,10 @@ tasks.pop()
 // Remove the first task from the list. Add two new high-priority tasks to the beginning of the list.
 // Replace the last task in the list with a new task. Log the updated task list after all operations.
 
-let taskss  = ["Task1","Task2","Task3","Task4","Task5"];
-taskss.shift() //removes the first task from list
-taskss.unshift("priority1","priority2"); //adds new high-priority tasks
-taskss[taskss.length-1]="replaced task"  //replaces last task
+// let taskss  = ["Task1","Task2","Task3","Task4","Task5"];
+// taskss.shift() //removes the first task from list
+// taskss.unshift("priority1","priority2"); //adds new high-priority tasks
+// taskss[taskss.length-1]="replaced task"  //replaces last task
 // console.log(taskss); 
 
 // Title: L1 - Student Score Manager: Handling Dynamic Adjustments
@@ -79,25 +79,95 @@ taskss[taskss.length-1]="replaced task"  //replaces last task
 // Count and log how many students passed (score of 50 or more) after the adjustments.
 // Log the final adjusted array of scores.
 
-let studentScores = [30,40,50,60,70,80,90,100,20,26] ;
-let adjustedScores =  [];
-let passedCount = 0;
+// let studentScores = [30,40,50,60,70,80,90,100,20,26] ;
+// let adjustedScores =  [];
+// let passedCount = 0;
 
-for(let i =0 ;i<studentScores.length;i++){
-  let scores = studentScores[i];
-  if(scores<40){
-    scores= scores+20;
-  }
+// for(let i =0 ;i<studentScores.length;i++){
+//   let scores = studentScores[i];
+//   if(scores<40){
+//     scores= scores+20;
+//   }
   
-  if(scores>90){
-    scores = 90
-  }
+//   if(scores>90){
+//     scores = 90
+//   }
   
-  if(scores>=50){
-    passedCount++
+//   if(scores>=50){
+//     passedCount++
+//   }
+//   adjustedScores.push(scores)
+// }
+
+// console.log(adjustedScores)
+// console.log(passedCount)
+
+
+//checkeing if the number is prime or not 
+
+// let num = Number(prompt("Please Enter a Number"));
+
+isPrime = true;
+
+for(let i =2;i<=num/2;i++){
+  if(num%i ===0){
+    isPrime  = false;
+    break;
   }
-  adjustedScores.push(scores)
 }
 
-console.log(adjustedScores)
-console.log(passedCount)
+if(isPrime) console.log("Prime Number");
+else console.log("Not a Prime Number");
+
+
+//sum of digits
+
+// let n = Number(prompt("Please Enter a number"));
+// let sum =0;
+// while(n>0){
+//   let rem = n % 10;
+//   sum = sum + rem;
+//   n = Math.floor(n/10);
+// }
+
+// console.log(sum)
+//sum of digits
+
+// let a = Number(prompt("Please Enter a number"));
+// let rev =0;
+// while(a>0){
+//   let rem = a % 10;
+//   rev = (rev * 10) + rem;
+//   a = Math.floor(a/10);
+// }
+
+// console.log(rev) 
+
+
+// let n = Number(prompt("please enter a number"));
+// let i;
+// for(i = n;i>=1;i--){
+//   console.log(i);
+// }
+
+// console.log("failed at ",i )
+
+
+// sum up to n terms;
+// let n = Number(prompt("Please enter a number"));
+// let sum = 0;
+
+// for(let i =1;i<=n;i++){
+//   sum = sum + i;
+// }
+// console.log(sum);
+
+
+//factorial of a number
+
+let n = Number(prompt("Please enter a number"));
+let fact=1;
+for(let i = 1;i<=n; i++){
+  fact = fact * i ;
+}
+console.log(fact);
